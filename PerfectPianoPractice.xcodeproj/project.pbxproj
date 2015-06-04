@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D36871411B1FE2D300AFFA0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36871401B1FE2D300AFFA0F /* AppDelegate.swift */; };
+		D36871441B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D36871421B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld */; };
+		D36871461B1FE2D400AFFA0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36871451B1FE2D400AFFA0F /* ViewController.swift */; };
+		D36871491B1FE2D400AFFA0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36871471B1FE2D400AFFA0F /* Main.storyboard */; };
+		D368714B1B1FE2D400AFFA0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D368714A1B1FE2D400AFFA0F /* Images.xcassets */; };
+		D368714E1B1FE2D400AFFA0F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D368714C1B1FE2D400AFFA0F /* LaunchScreen.xib */; };
+		D368715A1B1FE2D400AFFA0F /* PerfectPianoPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36871591B1FE2D400AFFA0F /* PerfectPianoPracticeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D36871541B1FE2D400AFFA0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D36871331B1FE2D300AFFA0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D368713A1B1FE2D300AFFA0F;
+			remoteInfo = PerfectPianoPractice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D368713B1B1FE2D300AFFA0F /* PerfectPianoPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPianoPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D368713F1B1FE2D300AFFA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36871401B1FE2D300AFFA0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D36871431B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PerfectPianoPractice.xcdatamodel; sourceTree = "<group>"; };
+		D36871451B1FE2D400AFFA0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D36871481B1FE2D400AFFA0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D368714A1B1FE2D400AFFA0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D368714D1B1FE2D400AFFA0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D36871531B1FE2D400AFFA0F /* PerfectPianoPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectPianoPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36871581B1FE2D400AFFA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D36871591B1FE2D400AFFA0F /* PerfectPianoPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectPianoPracticeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D36871381B1FE2D300AFFA0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D36871501B1FE2D400AFFA0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D36871321B1FE2D300AFFA0F = {
+			isa = PBXGroup;
+			children = (
+				D368713D1B1FE2D300AFFA0F /* PerfectPianoPractice */,
+				D36871561B1FE2D400AFFA0F /* PerfectPianoPracticeTests */,
+				D368713C1B1FE2D300AFFA0F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D368713C1B1FE2D300AFFA0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D368713B1B1FE2D300AFFA0F /* PerfectPianoPractice.app */,
+				D36871531B1FE2D400AFFA0F /* PerfectPianoPracticeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D368713D1B1FE2D300AFFA0F /* PerfectPianoPractice */ = {
+			isa = PBXGroup;
+			children = (
+				D36871401B1FE2D300AFFA0F /* AppDelegate.swift */,
+				D36871451B1FE2D400AFFA0F /* ViewController.swift */,
+				D36871471B1FE2D400AFFA0F /* Main.storyboard */,
+				D368714A1B1FE2D400AFFA0F /* Images.xcassets */,
+				D368714C1B1FE2D400AFFA0F /* LaunchScreen.xib */,
+				D36871421B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld */,
+				D368713E1B1FE2D300AFFA0F /* Supporting Files */,
+			);
+			path = PerfectPianoPractice;
+			sourceTree = "<group>";
+		};
+		D368713E1B1FE2D300AFFA0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D368713F1B1FE2D300AFFA0F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D36871561B1FE2D400AFFA0F /* PerfectPianoPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D36871591B1FE2D400AFFA0F /* PerfectPianoPracticeTests.swift */,
+				D36871571B1FE2D400AFFA0F /* Supporting Files */,
+			);
+			path = PerfectPianoPracticeTests;
+			sourceTree = "<group>";
+		};
+		D36871571B1FE2D400AFFA0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D36871581B1FE2D400AFFA0F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D368713A1B1FE2D300AFFA0F /* PerfectPianoPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D368715D1B1FE2D400AFFA0F /* Build configuration list for PBXNativeTarget "PerfectPianoPractice" */;
+			buildPhases = (
+				D36871371B1FE2D300AFFA0F /* Sources */,
+				D36871381B1FE2D300AFFA0F /* Frameworks */,
+				D36871391B1FE2D300AFFA0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerfectPianoPractice;
+			productName = PerfectPianoPractice;
+			productReference = D368713B1B1FE2D300AFFA0F /* PerfectPianoPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D36871521B1FE2D400AFFA0F /* PerfectPianoPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D36871601B1FE2D400AFFA0F /* Build configuration list for PBXNativeTarget "PerfectPianoPracticeTests" */;
+			buildPhases = (
+				D368714F1B1FE2D400AFFA0F /* Sources */,
+				D36871501B1FE2D400AFFA0F /* Frameworks */,
+				D36871511B1FE2D400AFFA0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D36871551B1FE2D400AFFA0F /* PBXTargetDependency */,
+			);
+			name = PerfectPianoPracticeTests;
+			productName = PerfectPianoPracticeTests;
+			productReference = D36871531B1FE2D400AFFA0F /* PerfectPianoPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D36871331B1FE2D300AFFA0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "lew flauta";
+				TargetAttributes = {
+					D368713A1B1FE2D300AFFA0F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					D36871521B1FE2D400AFFA0F = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = D368713A1B1FE2D300AFFA0F;
+					};
+				};
+			};
+			buildConfigurationList = D36871361B1FE2D300AFFA0F /* Build configuration list for PBXProject "PerfectPianoPractice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D36871321B1FE2D300AFFA0F;
+			productRefGroup = D368713C1B1FE2D300AFFA0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D368713A1B1FE2D300AFFA0F /* PerfectPianoPractice */,
+				D36871521B1FE2D400AFFA0F /* PerfectPianoPracticeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D36871391B1FE2D300AFFA0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D36871491B1FE2D400AFFA0F /* Main.storyboard in Resources */,
+				D368714E1B1FE2D400AFFA0F /* LaunchScreen.xib in Resources */,
+				D368714B1B1FE2D400AFFA0F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D36871511B1FE2D400AFFA0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D36871371B1FE2D300AFFA0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D36871461B1FE2D400AFFA0F /* ViewController.swift in Sources */,
+				D36871441B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld in Sources */,
+				D36871411B1FE2D300AFFA0F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D368714F1B1FE2D400AFFA0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D368715A1B1FE2D400AFFA0F /* PerfectPianoPracticeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D36871551B1FE2D400AFFA0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D368713A1B1FE2D300AFFA0F /* PerfectPianoPractice */;
+			targetProxy = D36871541B1FE2D400AFFA0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D36871471B1FE2D400AFFA0F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D36871481B1FE2D400AFFA0F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D368714C1B1FE2D400AFFA0F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D368714D1B1FE2D400AFFA0F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D368715B1B1FE2D400AFFA0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D368715C1B1FE2D400AFFA0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D368715E1B1FE2D400AFFA0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PerfectPianoPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D368715F1B1FE2D400AFFA0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PerfectPianoPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D36871611B1FE2D400AFFA0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PerfectPianoPracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectPianoPractice.app/PerfectPianoPractice";
+			};
+			name = Debug;
+		};
+		D36871621B1FE2D400AFFA0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PerfectPianoPracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectPianoPractice.app/PerfectPianoPractice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D36871361B1FE2D300AFFA0F /* Build configuration list for PBXProject "PerfectPianoPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D368715B1B1FE2D400AFFA0F /* Debug */,
+				D368715C1B1FE2D400AFFA0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D368715D1B1FE2D400AFFA0F /* Build configuration list for PBXNativeTarget "PerfectPianoPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D368715E1B1FE2D400AFFA0F /* Debug */,
+				D368715F1B1FE2D400AFFA0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D36871601B1FE2D400AFFA0F /* Build configuration list for PBXNativeTarget "PerfectPianoPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D36871611B1FE2D400AFFA0F /* Debug */,
+				D36871621B1FE2D400AFFA0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D36871421B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D36871431B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodel */,
+			);
+			currentVersion = D36871431B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodel */;
+			path = PerfectPianoPractice.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D36871331B1FE2D300AFFA0F /* Project object */;
+}
