@@ -322,6 +322,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordTapped:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="qcW-0o-cP1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,8 +354,9 @@
                         <outlet property="addTodoButton" destination="s7o-Nt-bIj" id="NIv-fR-Qub"/>
                         <outlet property="badgeTextBox" destination="Brn-vq-vHm" id="lcW-ei-PWf"/>
                         <outlet property="badgeTextfield" destination="Brn-vq-vHm" id="rbg-Jy-LGF"/>
-                        <outlet property="recordButton" destination="GXd-mf-yeC" id="53j-DO-nXZ"/>
+                        <outlet property="recordButton" destination="GXd-mf-yeC" id="yyv-O6-dXc"/>
                         <outlet property="saveButton" destination="Plr-5j-XLN" id="a4R-mT-F4a"/>
+                        <outlet property="titleTextBox" destination="JIP-nC-imt" id="sZg-sX-Q7v"/>
                         <outlet property="toDoTextField" destination="JIP-nC-imt" id="bys-nm-3Zf"/>
                     </connections>
                 </viewController>
