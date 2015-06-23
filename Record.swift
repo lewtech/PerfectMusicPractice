@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class PerfectPianoPractice: NSManagedObject {
+class Record: NSManagedObject {
 
     @NSManaged var day: String
     @NSManaged var name: String

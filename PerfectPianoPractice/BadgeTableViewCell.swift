@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 lew flauta. All rights reserved.
 //
 
-import Cocoa
+import UIKit
+import QuartzCore
 
 class BadgeTableViewCell: UITableViewCell {
 

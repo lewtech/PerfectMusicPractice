@@ -7,29 +7,119 @@
 //
 
 import UIKit
+import AVFoundation
+import CoreData
 
-class InstructorAddViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
+class InstructorAddViewController : UIViewController {
+
+
+    @IBOutlet weak var toDoTextField: UITextField!
+    @IBOutlet weak var badgeTextfield: UITextField!
+    var awardViewController = AwardViewController()
+
+
+    required init(coder aDecoder: NSCoder) {
+        var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
+        self.audioURL = NSUUID().UUIDString + ".m4a"
+        var pathComponents = [baseString, self.audioURL]
+        var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)
+
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+
+        var recordSettings: [NSObject : AnyObject] = Dictionary()
+        recordSettings[AVFormatIDKey] = kAudioFormatMPEG4AAC
+        recordSettings[AVSampleRateKey] = 44100.0
+        recordSettings[AVNumberOfChannelsKey] = 2
+
+        self.audioRecorder = AVAudioRecorder(URL: audioNSURL, settings: recordSettings, error: nil)
+        self.audioRecorder.meteringEnabled = true
+        self.audioRecorder.prepareToRecord()
+
+        // Super init is below
+        super.init(coder: aDecoder)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+ //       saveButton.enabled=false
+        badgeTextfield.hidden=false
+        addBadgeButton.hidden=false
+        recordButton.hidden=false
+        addTodoButton.hidden=false
+
+
+        
+    }
+
+    @IBOutlet weak var recordButton: UIButton!
+
+    @IBOutlet weak var titleTextBox: UITextField!
+    var previousViewController = InstructorViewController()
+    var audioRecorder: AVAudioRecorder
+    var audioURL: String
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+
+    @IBOutlet weak var addTodoButton: UIButton!
+
+    @IBOutlet weak var badgeTextBox: UITextField!
+
+    @IBOutlet weak var addBadgeButton: UIButton!
+    @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+
+
+    @IBAction func recordTapped(sender: UIButton) {
+
+        if self.audioRecorder.recording {
+            self.audioRecorder.stop()
+            self.recordButton.setTitle("RECORD", forState: UIControlState.Normal)
+            saveButton.enabled=true
+
+        } else {
+            self.audioRecorder.stop()
+            var session = AVAudioSession.sharedInstance()
+            session.setActive(true, error: nil)
+            self.audioRecorder.record()
+            self.recordButton.setTitle("Finish recording", forState: UIControlState.Normal)
+            saveButton.enabled=false
+        }
+    }
+
+
+    @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        //creates RecordedAudioobject
+        var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
+        record.name = toDoTextField.text
+        record.url = self.audioURL
+        record.day = "monday"
+        record.time = 2
+        record.isCompleted=false
+
+
+
+
+        //add sound to ViewController-tableview
+        //self.previousViewController.sounds.append(record)
+
+        //save recording to core data
+        context.save(nil)
+
+//        var award=Award()
+//        award.name = badgeTextfield.text
+//        self.awardViewController.awards.append(award)
+
+
+
+        //dismiss RecordPracticeViewController
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }
