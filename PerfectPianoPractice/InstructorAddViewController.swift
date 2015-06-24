@@ -15,11 +15,12 @@ import CoreData
 
 class InstructorAddViewController : UIViewController {
 
-
+    var awards:[Award] = []
     @IBOutlet weak var toDoTextField: UITextField!
     @IBOutlet weak var badgeTextfield: UITextField!
     var awardViewController = AwardViewController()
 
+    @IBOutlet weak var awardTextBox: UITextField!
     @IBOutlet weak var recordAccompaniment: UIButton!
 
     required init(coder aDecoder: NSCoder) {
@@ -89,6 +90,15 @@ class InstructorAddViewController : UIViewController {
             self.recordButton.setTitle("Finish recording", forState: UIControlState.Normal)
             saveButton.enabled=false
         }
+    }
+
+    @IBAction func addAwardPressed(sender: AnyObject) {
+        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+        var award=NSEntityDescription.insertNewObjectForEntityForName("Award", inManagedObjectContext: context) as! Award
+        award.name = awardTextBox.text
+        self.awards.append(award)
+        //self.tableView.reloadData()
+        context.save(nil)
     }
 
     @IBAction func recordAccompanimentPressed(sender: UIButton) {

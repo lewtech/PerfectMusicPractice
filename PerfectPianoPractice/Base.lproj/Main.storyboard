@@ -308,6 +308,9 @@
                                 <state key="normal" title="Add Badge">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addAwardPressed:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="vxV-wB-7C6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXd-mf-yeC">
                                 <rect key="frame" x="108" y="295" width="104" height="30"/>
@@ -371,6 +374,7 @@
                     <connections>
                         <outlet property="addBadgeButton" destination="8XY-WC-BMs" id="Ctk-1V-87C"/>
                         <outlet property="addTodoButton" destination="s7o-Nt-bIj" id="NIv-fR-Qub"/>
+                        <outlet property="awardTextBox" destination="Brn-vq-vHm" id="ZLK-B3-vqD"/>
                         <outlet property="badgeTextBox" destination="Brn-vq-vHm" id="lcW-ei-PWf"/>
                         <outlet property="badgeTextfield" destination="Brn-vq-vHm" id="rbg-Jy-LGF"/>
                         <outlet property="recordAccompaniment" destination="OcA-hw-9jm" id="cQc-5i-4tN"/>
