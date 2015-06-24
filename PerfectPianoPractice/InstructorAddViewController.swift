@@ -20,6 +20,7 @@ class InstructorAddViewController : UIViewController {
     @IBOutlet weak var badgeTextfield: UITextField!
     var awardViewController = AwardViewController()
 
+    @IBOutlet weak var recordAccompaniment: UIButton!
 
     required init(coder aDecoder: NSCoder) {
         var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
@@ -77,7 +78,7 @@ class InstructorAddViewController : UIViewController {
 
         if self.audioRecorder.recording {
             self.audioRecorder.stop()
-            self.recordButton.setTitle("RECORD", forState: UIControlState.Normal)
+            self.recordButton.setTitle("Record Lesson", forState: UIControlState.Normal)
             saveButton.enabled=true
 
         } else {
@@ -90,6 +91,22 @@ class InstructorAddViewController : UIViewController {
         }
     }
 
+    @IBAction func recordAccompanimentPressed(sender: UIButton) {
+
+        if self.audioRecorder.recording {
+            self.audioRecorder.stop()
+            self.recordAccompaniment.setTitle("Record Accompaniment", forState: UIControlState.Normal)
+            saveButton.enabled=true
+
+        } else {
+            self.audioRecorder.stop()
+            var session = AVAudioSession.sharedInstance()
+            session.setActive(true, error: nil)
+            self.audioRecorder.record()
+            self.recordAccompaniment.setTitle("Finish recording", forState: UIControlState.Normal)
+            saveButton.enabled=false
+        }
+    }
 
     @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
         var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!

@@ -326,6 +326,23 @@
                                     <action selector="recordTapped:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="qcW-0o-cP1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcA-hw-9jm">
+                                <rect key="frame" x="77" y="340" width="166" height="30"/>
+                                <color key="backgroundColor" red="0.83676609850000006" green="0.0" blue="0.1181394441" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Record Accompaniment">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordAccompanimentPressed:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="nL1-5v-ZFt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
@@ -336,6 +353,7 @@
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="centerX" secondItem="s7o-Nt-bIj" secondAttribute="centerX" id="9co-Tq-MDu"/>
                             <constraint firstItem="8XY-WC-BMs" firstAttribute="top" secondItem="Brn-vq-vHm" secondAttribute="bottom" constant="13" id="DUe-tQ-nIL"/>
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="trailing" secondItem="JIP-nC-imt" secondAttribute="trailing" id="E1p-jk-apX"/>
+                            <constraint firstItem="OcA-hw-9jm" firstAttribute="top" secondItem="GXd-mf-yeC" secondAttribute="bottom" constant="15" id="IMd-f4-vMW"/>
                             <constraint firstItem="JIP-nC-imt" firstAttribute="trailing" secondItem="0GR-RI-k06" secondAttribute="trailingMargin" id="MJd-Jl-hJy"/>
                             <constraint firstAttribute="centerX" secondItem="GXd-mf-yeC" secondAttribute="centerX" id="NKT-kY-nhH"/>
                             <constraint firstItem="QMD-uy-UuL" firstAttribute="leading" secondItem="0GR-RI-k06" secondAttribute="leadingMargin" constant="-16" id="ULK-OZ-BQM"/>
@@ -347,6 +365,7 @@
                             <constraint firstItem="QMD-uy-UuL" firstAttribute="top" secondItem="UjJ-5p-nLl" secondAttribute="bottom" id="nep-V5-u7E"/>
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="leading" secondItem="JIP-nC-imt" secondAttribute="leading" id="u1P-Ew-gnt"/>
                             <constraint firstItem="JIP-nC-imt" firstAttribute="leading" secondItem="0GR-RI-k06" secondAttribute="leadingMargin" id="uvo-Xa-IjZ"/>
+                            <constraint firstAttribute="centerX" secondItem="OcA-hw-9jm" secondAttribute="centerX" id="xf4-xG-Hgw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -354,6 +373,7 @@
                         <outlet property="addTodoButton" destination="s7o-Nt-bIj" id="NIv-fR-Qub"/>
                         <outlet property="badgeTextBox" destination="Brn-vq-vHm" id="lcW-ei-PWf"/>
                         <outlet property="badgeTextfield" destination="Brn-vq-vHm" id="rbg-Jy-LGF"/>
+                        <outlet property="recordAccompaniment" destination="OcA-hw-9jm" id="cQc-5i-4tN"/>
                         <outlet property="recordButton" destination="GXd-mf-yeC" id="yyv-O6-dXc"/>
                         <outlet property="saveButton" destination="Plr-5j-XLN" id="a4R-mT-F4a"/>
                         <outlet property="titleTextBox" destination="JIP-nC-imt" id="sZg-sX-Q7v"/>
