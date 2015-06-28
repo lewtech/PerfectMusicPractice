@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="1470" y="991"/>
         </scene>
-        <!--Award View Controller-->
+        <!--🌟Awards-->
         <scene sceneID="JqH-Th-jj8">
             <objects>
                 <viewController id="rl0-Ue-eGN" customClass="AwardViewController" customModule="PerfectPianoPractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,31 +150,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="84P-t4-GZ9" secondAttribute="trailing" constant="-16" id="n1S-Lt-NlL"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="IrJ-LN-qBX"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="RAt-Tc-uH0">
-                        <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Vj5-B3-qIW">
-                            <connections>
-                                <action selector="deletePressed:" destination="rl0-Ue-eGN" id="ksV-aH-2yL"/>
-                            </connections>
-                        </barButtonItem>
-                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏆" borderStyle="roundedRect" placeholder="🏆Add Badges" minimumFontSize="17" id="pMR-mm-oze">
-                            <rect key="frame" x="100" y="7" width="120" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Evo-JF-TJC">
-                            <connections>
-                                <action selector="addAward:" destination="rl0-Ue-eGN" id="zaj-Ue-eX4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="🌟Awards" id="RAt-Tc-uH0"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="awardTextBox" destination="pMR-mm-oze" id="26X-WE-WGT"/>
                         <outlet property="tableView" destination="84P-t4-GZ9" id="Tch-G5-5Dh"/>
                     </connections>
                 </viewController>

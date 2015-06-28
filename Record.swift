@@ -1,8 +1,8 @@
 //
-//  PerfectPianoPractice.swift
+//  Record.swift
 //  PerfectPianoPractice
 //
-//  Created by Lew Flauta on 6/5/15.
+//  Created by Lew Flauta on 6/28/15.
 //  Copyright (c) 2015 lew flauta. All rights reserved.
 //
 
@@ -12,9 +12,10 @@ import CoreData
 class Record: NSManagedObject {
 
     @NSManaged var day: String
+    @NSManaged var isCompleted: NSNumber
     @NSManaged var name: String
     @NSManaged var time: NSNumber
     @NSManaged var url: String
-    @NSManaged var isCompleted: NSNumber
+    @NSManaged var uuid: String
 
 }

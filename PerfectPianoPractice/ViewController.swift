@@ -29,6 +29,9 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             }
         }
 
+            context.deleteObject(record)
+            context.save(nil)
+
         sounds.removeAtIndex(index)
 
         

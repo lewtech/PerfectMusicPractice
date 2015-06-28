@@ -97,6 +97,7 @@ class InstructorAddViewController : UIViewController {
         var award=NSEntityDescription.insertNewObjectForEntityForName("Award", inManagedObjectContext: context) as! Award
         award.name = awardTextBox.text
         self.awards.append(award)
+        
         //self.tableView.reloadData()
         context.save(nil)
     }
@@ -127,6 +128,7 @@ class InstructorAddViewController : UIViewController {
         record.day = "monday"
         record.time = 2
         record.isCompleted=false
+        record.uuid = NSUUID().UUIDString
 
 
 

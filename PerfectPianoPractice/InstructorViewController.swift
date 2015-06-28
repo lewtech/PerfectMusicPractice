@@ -30,6 +30,9 @@ class InstructorViewController: UIViewController,UITableViewDataSource,UITableVi
                 }
             }
 
+            context.deleteObject(record)
+            context.save(nil)
+
             sounds.removeAtIndex(index)
 
 
