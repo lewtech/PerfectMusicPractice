@@ -325,6 +325,15 @@
                                     <action selector="recordAccompanimentPressed:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="nL1-5v-ZFt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Reset For the Week" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rd5-sR-MHe">
+                                <rect key="frame" x="86" y="383" width="148" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91484454416095118" blue="0.1788373127719175" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="resetForWeekButtonPressed:" destination="Ifo-ST-pVd" eventType="editingDidEnd" id="mtX-fA-5CA"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">

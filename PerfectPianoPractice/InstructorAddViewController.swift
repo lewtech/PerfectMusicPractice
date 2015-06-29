@@ -20,6 +20,10 @@ class InstructorAddViewController : UIViewController {
     @IBOutlet weak var badgeTextfield: UITextField!
     var awardViewController = AwardViewController()
 
+    var sounds: [Record] = []
+
+
+
     @IBOutlet weak var awardTextBox: UITextField!
     @IBOutlet weak var recordAccompaniment: UIButton!
 
@@ -51,6 +55,8 @@ class InstructorAddViewController : UIViewController {
         addBadgeButton.hidden=false
         recordButton.hidden=false
         addTodoButton.hidden=false
+        var request = NSFetchRequest(entityName: "Record")
+        self.sounds = context.executeFetchRequest(request, error: nil) as! [Record]
 
 
         
@@ -97,7 +103,6 @@ class InstructorAddViewController : UIViewController {
         var award=NSEntityDescription.insertNewObjectForEntityForName("Award", inManagedObjectContext: context) as! Award
         award.name = awardTextBox.text
         self.awards.append(award)
-        
         //self.tableView.reloadData()
         context.save(nil)
     }
@@ -119,8 +124,14 @@ class InstructorAddViewController : UIViewController {
         }
     }
 
+    @IBAction func resetForWeekButtonPressed(sender: UITextField) {
+
+
+    }
+
+
     @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
-        var context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+
         //creates RecordedAudioobject
         var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
         record.name = toDoTextField.text
