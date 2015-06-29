@@ -124,10 +124,21 @@ class InstructorAddViewController : UIViewController {
         }
     }
 
-    @IBAction func resetForWeekButtonPressed(sender: UITextField) {
+    @IBAction func resetForTheWeekPressed(sender: UIButton) {
+        //iterate through awards
+        //delets all awards
 
+        //iterate through records
+        //delete all records
+        //also delete recording
+        for i in 0..<sounds.count{
+        context.deleteObject(sounds[i])
+        context.save(nil)
+        }
 
+        //sounds.removeAtIndex(index)
     }
+
 
 
     @IBAction func saveButtonPressed(sender: UIBarButtonItem) {

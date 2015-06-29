@@ -325,15 +325,16 @@
                                     <action selector="recordAccompanimentPressed:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="nL1-5v-ZFt"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Reset For the Week" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rd5-sR-MHe">
-                                <rect key="frame" x="86" y="383" width="148" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.91484454416095118" blue="0.1788373127719175" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOk-Gb-4fv">
+                                <rect key="frame" x="93" y="383" width="135" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89148239800841189" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Reset For the Week">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="resetForWeekButtonPressed:" destination="Ifo-ST-pVd" eventType="editingDidEnd" id="mtX-fA-5CA"/>
+                                    <action selector="resetForTheWeekPressed:" destination="Ifo-ST-pVd" eventType="touchUpInside" id="Xfe-NR-Lu3"/>
                                 </connections>
-                            </textField>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
@@ -353,7 +354,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QMD-uy-UuL" secondAttribute="trailing" constant="-16" id="eQf-E8-0Gc"/>
                             <constraint firstItem="JIP-nC-imt" firstAttribute="top" secondItem="QMD-uy-UuL" secondAttribute="bottom" constant="39" id="efg-iv-3yY"/>
                             <constraint firstItem="GXd-mf-yeC" firstAttribute="top" secondItem="8XY-WC-BMs" secondAttribute="bottom" constant="26" id="h6w-oI-fua"/>
+                            <constraint firstItem="yOk-Gb-4fv" firstAttribute="top" secondItem="OcA-hw-9jm" secondAttribute="bottom" constant="13" id="kK7-dR-zKu"/>
                             <constraint firstItem="QMD-uy-UuL" firstAttribute="top" secondItem="UjJ-5p-nLl" secondAttribute="bottom" id="nep-V5-u7E"/>
+                            <constraint firstAttribute="centerX" secondItem="yOk-Gb-4fv" secondAttribute="centerX" id="peh-1z-xc9"/>
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="leading" secondItem="JIP-nC-imt" secondAttribute="leading" id="u1P-Ew-gnt"/>
                             <constraint firstItem="JIP-nC-imt" firstAttribute="leading" secondItem="0GR-RI-k06" secondAttribute="leadingMargin" id="uvo-Xa-IjZ"/>
                             <constraint firstAttribute="centerX" secondItem="OcA-hw-9jm" secondAttribute="centerX" id="xf4-xG-Hgw"/>
