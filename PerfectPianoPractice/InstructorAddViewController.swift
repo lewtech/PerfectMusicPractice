@@ -13,14 +13,19 @@ import CoreData
 
 
 
-class InstructorAddViewController : UIViewController {
+
+
+class InstructorAddViewController : UIViewController  {
 
     var awards:[Award] = []
     @IBOutlet weak var toDoTextField: UITextField!
     @IBOutlet weak var badgeTextfield: UITextField!
     var awardViewController = AwardViewController()
 
+    @IBOutlet weak var daySegmentedControl: UISegmentedControl!
     var sounds: [Record] = []
+    var daySelectedInt: Int
+
 
 
 
@@ -44,7 +49,7 @@ class InstructorAddViewController : UIViewController {
         self.audioRecorder = AVAudioRecorder(URL: audioNSURL, settings: recordSettings, error: nil)
         self.audioRecorder.meteringEnabled = true
         self.audioRecorder.prepareToRecord()
-
+        self.daySelectedInt=0
         // Super init is below
         super.init(coder: aDecoder)
     }
@@ -69,12 +74,10 @@ class InstructorAddViewController : UIViewController {
     var audioRecorder: AVAudioRecorder
     var audioURL: String
     @IBOutlet weak var saveButton: UIBarButtonItem!
-
     @IBOutlet weak var addTodoButton: UIButton!
-
     @IBOutlet weak var badgeTextBox: UITextField!
-
     @IBOutlet weak var addBadgeButton: UIButton!
+
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
 
@@ -132,14 +135,46 @@ class InstructorAddViewController : UIViewController {
         //delete all records
         //also delete recording
         for i in 0..<sounds.count{
-        context.deleteObject(sounds[i])
-        context.save(nil)
+/*            var record = sounds[i]
+            var baseString : String = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)[0] as! String
+            var pathComponents = [baseString, record.url]
+            var audioNSURL = NSURL.fileURLWithPathComponents(pathComponents)
+            NSFileManager.defaultManager().removeItemAtPath(audioNSURL, error: nil) */
+
+
+
+            
+            context.deleteObject(sounds[i])
+            context.save(nil)
         }
+
+        for i in 0..<awards.count{
+            context.deleteObject(awards[i])
+            context.save(nil)
+        }
+
 
         //sounds.removeAtIndex(index)
     }
 
 
+
+    @IBAction func addToDoPressed(sender: UIButton) {
+        var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
+        record.name = toDoTextField.text
+        record.url = self.audioURL
+        record.day = daySegmentedControl.titleForSegmentAtIndex(1)!
+        record.time = 2
+        record.isCompleted=false
+        record.uuid = NSUUID().UUIDString
+
+        context.save(nil)
+    }
+
+    @IBAction func daySelected(sender: UISegmentedControl) {
+        daySelectedInt = daySegmentedControl.selectedSegmentIndex
+
+    }
 
     @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
 
@@ -147,7 +182,8 @@ class InstructorAddViewController : UIViewController {
         var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
         record.name = toDoTextField.text
         record.url = self.audioURL
-        record.day = "monday"
+        record.day = daySegmentedControl.titleForSegmentAtIndex(daySelectedInt)!
+        NSLog(record.day)
         record.time = 2
         record.isCompleted=false
         record.uuid = NSUUID().UUIDString
