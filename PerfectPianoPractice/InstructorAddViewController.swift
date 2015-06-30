@@ -182,10 +182,12 @@ class InstructorAddViewController : UIViewController  {
         var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
         record.name = toDoTextField.text
         record.url = self.audioURL
-        record.day = daySegmentedControl.titleForSegmentAtIndex(1)!
-        record.time = 2
+        record.day = daySegmentedControl.titleForSegmentAtIndex(daySelectedInt)!
+        record.sortPriority = daySelectedInt
+        record.time = 0
         record.isCompleted=false
         record.uuid = NSUUID().UUIDString
+
 
         context.save(nil)
     }
