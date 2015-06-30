@@ -145,7 +145,7 @@ class InstructorViewController: UIViewController,UITableViewDataSource,UITableVi
         cell.textLabel?.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
         let item=sounds[indexPath.row]
-        cell.textLabel!.text=record.name
+        cell.textLabel!.text=record.day + ": " + record.name
         cell.detailTextLabel?.text=record.name
         cell.record = item
         if (record.isCompleted == true) {

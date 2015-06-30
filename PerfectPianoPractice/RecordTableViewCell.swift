@@ -20,6 +20,7 @@ protocol RecordTableViewCellDelegate {
 
 class RecordTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var detail: UILabel!
     let gradientLayer = CAGradientLayer()
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false, completeOnDragRelease = false

@@ -90,6 +90,15 @@ class InstructorAddViewController : UIViewController  {
             self.audioRecorder.stop()
             self.recordButton.setTitle("Record Lesson", forState: UIControlState.Normal)
             saveButton.enabled=true
+            var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
+            record.name = toDoTextField.text
+            record.url = self.audioURL
+            record.day = "Lesson Recording"
+            NSLog(record.day)
+            record.time = 2
+            record.isCompleted=true
+            record.uuid = NSUUID().UUIDString
+            context.save(nil)
 
         } else {
             self.audioRecorder.stop()
@@ -116,6 +125,16 @@ class InstructorAddViewController : UIViewController  {
             self.audioRecorder.stop()
             self.recordAccompaniment.setTitle("Record Accompaniment", forState: UIControlState.Normal)
             saveButton.enabled=true
+           // titleTextBox.text = ""
+            var record=NSEntityDescription.insertNewObjectForEntityForName("Record", inManagedObjectContext: context) as! Record
+            record.name = toDoTextField.text
+            record.url = self.audioURL
+            record.day = "accompinament recording"
+            NSLog(record.day)
+            record.time = 2
+            record.isCompleted=true
+            record.uuid = NSUUID().UUIDString
+            context.save(nil)
 
         } else {
             self.audioRecorder.stop()

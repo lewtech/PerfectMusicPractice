@@ -18,6 +18,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
     }
 
+
     func recordChanged(record: Record, action: String) {
 
         if (action=="delete"){
@@ -124,14 +125,18 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         var record=self.sounds[indexPath.row]
         //var cell=UITableViewCell()
-        let cell = tableView.dequeueReusableCellWithIdentifier("recordID", forIndexPath: indexPath)
+        let cellIdentifier = "recordID"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
             as! RecordTableViewCell
 
         cell.textLabel?.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
         let item=sounds[indexPath.row]
-        cell.textLabel!.text=record.name
-        cell.detailTextLabel?.text=record.name
+        cell.textLabel!.text=record.day + ": " + record.name
+        cell.detailTextLabel?.text = "text"
+
+//        cell.detailTextLabel!.text="text"
+        //cell.detail.text = "test"
         cell.record = item
         if (record.isCompleted == true) {
             cell.accessoryType = .Checkmark

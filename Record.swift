@@ -2,7 +2,7 @@
 //  Record.swift
 //  PerfectPianoPractice
 //
-//  Created by Lew Flauta on 6/28/15.
+//  Created by Lew Flauta on 6/30/15.
 //  Copyright (c) 2015 lew flauta. All rights reserved.
 //
 
@@ -17,5 +17,6 @@ class Record: NSManagedObject {
     @NSManaged var time: NSNumber
     @NSManaged var url: String
     @NSManaged var uuid: String
+    @NSManaged var sortPriority: NSNumber
 
 }

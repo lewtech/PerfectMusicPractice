@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C05EFE81B23FF4200364E3B /* BadgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C05EFE71B23FF4200364E3B /* BadgeTableViewCell.swift */; };
 		7C1603AE1B246AD300F91EF6 /* AwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1603AD1B246AD300F91EF6 /* AwardViewController.swift */; };
-		7C20E3931B3FFDE700E76BDA /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C20E3921B3FFDE700E76BDA /* Record.swift */; };
+		7C20E3951B42EFDA00E76BDA /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C20E3941B42EFDA00E76BDA /* Record.swift */; };
 		7C5352FB1B22875900282490 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5352FA1B22875900282490 /* RecordTableViewCell.swift */; };
 		7CB8BEA31B23355700061AD0 /* InstructorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8BEA21B23355700061AD0 /* InstructorViewController.swift */; };
 		7CB8BEA51B23558A00061AD0 /* InstructorAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8BEA41B23558A00061AD0 /* InstructorAddViewController.swift */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		7C05EFE71B23FF4200364E3B /* BadgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell.swift; sourceTree = "<group>"; };
 		7C1603AD1B246AD300F91EF6 /* AwardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwardViewController.swift; path = ../AwardViewController.swift; sourceTree = "<group>"; };
-		7C20E3921B3FFDE700E76BDA /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
+		7C20E3941B42EFDA00E76BDA /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Record.swift; path = ../Record.swift; sourceTree = "<group>"; };
 		7C5352FA1B22875900282490 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		7CB8BEA21B23355700061AD0 /* InstructorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructorViewController.swift; sourceTree = "<group>"; };
 		7CB8BEA41B23558A00061AD0 /* InstructorAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructorAddViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		7C5353001B228A1100282490 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7C20E3921B3FFDE700E76BDA /* Record.swift */,
+				7C20E3941B42EFDA00E76BDA /* Record.swift */,
 				7CF6B5241B30D4C800062288 /* Award.swift */,
 				D36871421B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld */,
 			);
@@ -253,7 +253,7 @@
 				D36871461B1FE2D400AFFA0F /* ViewController.swift in Sources */,
 				D36871441B1FE2D400AFFA0F /* PerfectPianoPractice.xcdatamodeld in Sources */,
 				7C5352FB1B22875900282490 /* RecordTableViewCell.swift in Sources */,
-				7C20E3931B3FFDE700E76BDA /* Record.swift in Sources */,
+				7C20E3951B42EFDA00E76BDA /* Record.swift in Sources */,
 				D36871411B1FE2D300AFFA0F /* AppDelegate.swift in Sources */,
 				7CB8BEA51B23558A00061AD0 /* InstructorAddViewController.swift in Sources */,
 				D3401E0C1B20AC550094471E /* RecordPracticeViewController.swift in Sources */,
