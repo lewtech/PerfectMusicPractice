@@ -376,6 +376,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUz-as-kPm">
+                                <rect key="frame" x="127" y="266" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
@@ -387,10 +393,12 @@
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="centerX" secondItem="s7o-Nt-bIj" secondAttribute="centerX" id="9co-Tq-MDu"/>
                             <constraint firstItem="8XY-WC-BMs" firstAttribute="top" secondItem="Brn-vq-vHm" secondAttribute="bottom" constant="13" id="DUe-tQ-nIL"/>
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="trailing" secondItem="JIP-nC-imt" secondAttribute="trailing" id="E1p-jk-apX"/>
+                            <constraint firstAttribute="centerX" secondItem="FUz-as-kPm" secondAttribute="centerX" id="E2B-dR-F5Y"/>
                             <constraint firstItem="OcA-hw-9jm" firstAttribute="top" secondItem="GXd-mf-yeC" secondAttribute="bottom" constant="15" id="IMd-f4-vMW"/>
                             <constraint firstItem="JIP-nC-imt" firstAttribute="trailing" secondItem="0GR-RI-k06" secondAttribute="trailingMargin" id="MJd-Jl-hJy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0M5-IX-4Fm" secondAttribute="trailing" constant="-3" id="NII-4H-C0Q"/>
                             <constraint firstAttribute="centerX" secondItem="GXd-mf-yeC" secondAttribute="centerX" id="NKT-kY-nhH"/>
+                            <constraint firstItem="FUz-as-kPm" firstAttribute="top" secondItem="Brn-vq-vHm" secondAttribute="bottom" constant="40" id="Tuo-29-b3R"/>
                             <constraint firstItem="QMD-uy-UuL" firstAttribute="leading" secondItem="0GR-RI-k06" secondAttribute="leadingMargin" constant="-16" id="ULK-OZ-BQM"/>
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="top" secondItem="s7o-Nt-bIj" secondAttribute="bottom" constant="20" id="YQu-x9-3Vd"/>
                             <constraint firstItem="Brn-vq-vHm" firstAttribute="centerX" secondItem="8XY-WC-BMs" secondAttribute="centerX" id="ZZS-Fh-evb"/>
@@ -416,6 +424,7 @@
                         <outlet property="recordAccompaniment" destination="OcA-hw-9jm" id="cQc-5i-4tN"/>
                         <outlet property="recordButton" destination="GXd-mf-yeC" id="yyv-O6-dXc"/>
                         <outlet property="saveButton" destination="Plr-5j-XLN" id="a4R-mT-F4a"/>
+                        <outlet property="timerLabel" destination="FUz-as-kPm" id="ZK9-27-IcB"/>
                         <outlet property="titleTextBox" destination="JIP-nC-imt" id="sZg-sX-Q7v"/>
                         <outlet property="toDoTextField" destination="JIP-nC-imt" id="bys-nm-3Zf"/>
                     </connections>

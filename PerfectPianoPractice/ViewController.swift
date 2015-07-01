@@ -132,7 +132,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.textLabel?.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
         let item=sounds[indexPath.row]
-        cell.textLabel!.text=record.day + ": " + record.name
+        cell.textLabel!.text = record.day + ": " + record.name  
         cell.detailTextLabel?.text = "text"
 
 //        cell.detailTextLabel!.text="text"

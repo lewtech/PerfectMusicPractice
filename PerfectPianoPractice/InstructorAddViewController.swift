@@ -25,7 +25,10 @@ class InstructorAddViewController : UIViewController  {
     @IBOutlet weak var daySegmentedControl: UISegmentedControl!
     var sounds: [Record] = []
     var daySelectedInt: Int
+    var startTime = NSTimeInterval()
+    var timer = NSTimer()
 
+    @IBOutlet weak var timerLabel: UILabel!
 
 
 
@@ -100,6 +103,10 @@ class InstructorAddViewController : UIViewController  {
             record.uuid = NSUUID().UUIDString
             context.save(nil)
 
+            //timer function
+            timer.invalidate()
+            //timer = nil
+
         } else {
             self.audioRecorder.stop()
             var session = AVAudioSession.sharedInstance()
@@ -107,6 +114,11 @@ class InstructorAddViewController : UIViewController  {
             self.audioRecorder.record()
             self.recordButton.setTitle("Finish recording", forState: UIControlState.Normal)
             saveButton.enabled=false
+
+            //timer function
+            let aSelector : Selector = "updateTime"
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = NSDate.timeIntervalSinceReferenceDate()
         }
     }
 
@@ -136,6 +148,10 @@ class InstructorAddViewController : UIViewController  {
             record.uuid = NSUUID().UUIDString
             context.save(nil)
 
+            //timer function
+            timer.invalidate()
+            //timer = nil
+
         } else {
             self.audioRecorder.stop()
             var session = AVAudioSession.sharedInstance()
@@ -143,8 +159,51 @@ class InstructorAddViewController : UIViewController  {
             self.audioRecorder.record()
             self.recordAccompaniment.setTitle("Finish recording", forState: UIControlState.Normal)
             saveButton.enabled=false
+
+            //timer function
+            let aSelector : Selector = "updateTime"
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = NSDate.timeIntervalSinceReferenceDate()
         }
     }
+
+    func updateTime() {
+
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+
+        //Find the difference between current time and start time.
+
+        var elapsedTime: NSTimeInterval = currentTime - startTime
+
+        //calculate the minutes in elapsed time.
+
+        let minutes = UInt8(elapsedTime / 60.0)
+
+        elapsedTime -= (NSTimeInterval(minutes) * 60)
+
+        //calculate the seconds in elapsed time.
+
+        let seconds = UInt8(elapsedTime)
+
+        elapsedTime -= NSTimeInterval(seconds)
+
+        //find out the fraction of milliseconds to be displayed.
+
+        let fraction = UInt8(elapsedTime * 100)
+
+        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        let strFraction = String(format: "%02d", fraction)
+
+        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
+        
+        timerLabel.text = "\(strMinutes):\(strSeconds):\(strFraction)"
+        
+        
+    }
+
 
     @IBAction func resetForTheWeekPressed(sender: UIButton) {
         //iterate through awards
